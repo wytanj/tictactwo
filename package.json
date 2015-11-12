@@ -2,7 +2,7 @@
   "name": "tictactwo",
   "version": "1.0.0",
   "description": "Tic Tac Toe",
-  "main": "game/ttt.js",
+  "main": "ttt.js",
   "scripts": {
     "start": "npm run build && http-server dist",
     "test": "standard",
@@ -10,7 +10,7 @@
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp game/index.html dist/index.html",
     "build-css": "cp game/styles.css dist/styles.css",
-    "build-js": "browserify game/ttt.js --outfile dist/ttt.dist.js --transform babelify"
+    "build-js": "browserify game/ttt.js --outfile dist/ttt.js --transform babelify"
   },
   "keywords": [
     "tictactwo"
