@@ -2,7 +2,7 @@
   "name": "tictactwo",
   "version": "1.0.0",
   "description": "Tic Tac Toe",
-  "main": "ttt.js",
+  "main": "game/ttt.js",
   "scripts": {
     "start": "npm run build && http-server dist",
     "test": "standard",
