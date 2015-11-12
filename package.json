@@ -9,7 +9,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp game/index.html dist/index.html",
-    "build-css": "cp game/ttt.css dist/ttt.css",
+    "build-css": "cp game/styles.css dist/styles.css",
     "build-js": "browserify game/ttt.js --outfile dist/ttt.dist.js --transform babelify"
   },
   "keywords": [
