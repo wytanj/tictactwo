@@ -4,16 +4,21 @@
   "description": "Tic Tac Toe",
   "main": "ttt.js",
   "scripts": {
+    "start": "npm run build && http-server game",
     "test": "standard",
-    "build": "browserify ttt.js --outfile game.dist.js --transform babelify"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
+    "build-html": "cp game/index.html dist/index.html",
+    "build-css": "cp game/game.css dist/game.css",
+    "build-js": "browserify game/ttt.js --outfile game/ttt.dist.js --transform babelify"
   },
   "keywords": [
     "tictactwo"
   ],
   "author": "@wytanj",
-  "repository" :
-    { "type" : "git"
-    , "url" : "https://github.com/wytanj/tictactwo.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wytanj/tictactwo.git"
   },
   "license": "ISC",
   "dependencies": {
@@ -21,6 +26,7 @@
     "babel-preset-stage-0": "^6.1.2",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
+    "http-server": "^0.8.5",
     "standard": "^5.3.1"
   }
 }
