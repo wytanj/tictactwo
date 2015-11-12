@@ -1,8 +1,8 @@
 /* globals $ */
 // JavaScript Document
 $(document).ready(function () {
-var x = "x"
-var o = "o"
+  var x = 'x'
+  var o = 'o'
 var count = 0;
 var o_win = 0;
 var x_win = 0;
